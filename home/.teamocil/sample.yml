@@ -1,0 +1,7 @@
+windows:
+  - name: butiik-api-production
+    root: ~/development/butiik-api
+    layout: even-horizontal
+    panes:
+      - npm start
+      - sudo mongod
