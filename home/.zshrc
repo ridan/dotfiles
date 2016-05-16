@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/RIdan/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -52,19 +52,15 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 # User configuration
+if which pyenv > /dev/null; then 
+  eval "$(pyenv init -)"; 
+fi
+if which pyenv-virtualenv-init > /dev/null; then 
+  eval "$(pyenv virtualenv-init -)"; 
+fi
 
-export PATH="/usr/local/heroku/bin:/Users/RIdan/local/bin:/Users/RIdan/bin/Sencha/Cmd/4.0.2.67:/usr/local/bin:/Users/RIdan/bin/Sencha/Cmd/4.0.2.67:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Users/RIdan/Desktop/apache-ant-1.9.4/bin:/Users/RIdan/Desktop/adt-bundle-mac-x86_64-20140321/sdk/platform-tools:/Users/RIdan/Desktop/adt-bundle-mac-x86_64-20140321/sdk/tools"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# This is for pyenv and shims, to enable autocompletion for pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
-# To activate completions, brew told me to do this
-ifpath=(/usr/local/share/zsh-completions $fpath)
-
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -91,7 +87,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
+source $ZSH/oh-my-zsh.sh
+export NVM_DIR=~/.nvm
+source /usr/local/opt/nvm/nvm.sh
+export PATH="$PATH:$HOME/.rvm/bin"
