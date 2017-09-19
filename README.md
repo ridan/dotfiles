@@ -1,5 +1,5 @@
 # dotfiles
-This toolchain is uses Dotfiles.
+This toolchain uses Dotfiles.
 
 ## Setup
 You need to have Dotfiles installed on your machine.
@@ -64,6 +64,11 @@ brew install node
 Install NVM to manage the node versions
 ```
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.4/install.sh | bash
+```
+
+## Configure Git
+```
+git config --global user.name "ridan"
 ```
 
 ## Miscellaneous Terminal configs
