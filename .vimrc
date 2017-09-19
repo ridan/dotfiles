@@ -23,10 +23,11 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'flazz/vim-colorschemes' 
 
 " Plugin for the tree explorer
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 
 " Plugin for the statusline
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Plugin for editorconfig
 Plugin 'editorconfig/editorconfig-vim'
@@ -69,11 +70,11 @@ endif
 set mouse=nicr
 syntax on
 colorscheme monokai
-let g:airline_powerline_fonts=1
-let g:airline_theme='badwolf'
+" let g:airline_powerline_fonts=1
+let g:airline_theme='dark'
 " This is for the airline symbols
 " Airline symbols
 set number
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
